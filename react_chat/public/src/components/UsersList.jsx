@@ -1,0 +1,18 @@
+/**@jsx React.DOM */
+
+'use strict';
+
+var UsersList = React.createClass({
+    render: function(){
+        var users= this.props.users.map(function(user){
+            return <div className='chat-user'>{user}</div>
+        })
+        return(
+        <div className='userslist'>
+            <p> online </p>
+            {users}
+        </div>
+        )
+    }
+}
+)
